@@ -11,7 +11,7 @@ You'll have to have these tools installed:
 #### Installing Mingw32
 
 Download the installer from its [donwload page](https://sourceforge.net/projects/mingw/files/Installer/mingw-get-setup.exe/download).
-Once you have MinGW Installation Manager running (search for mingw-get.exe if you don't), select "All Packages > MinGW > MinGW Base System" on the left column. On the main panel, mark for installation *ming32-base* and check "Installation > Apply Changes".
+Once you have MinGW Installation Manager running (search for mingw-get.exe if you don't), select "All Packages > MinGW > MinGW Base System" on the left column. On the main panel, mark for installation `ming32-base` and check "Installation > Apply Changes".
 
 After you finished the setup, open a command prompt and type in
 ```
@@ -25,13 +25,37 @@ Just follow the instructions on [this page](https://kripken.github.io/emscripten
 
 ## Cloning TIC-80
 
-Clone from github
+Clone TIC from [github](https://github.com/nesbox/TIC-80).
+From TIC's official README:
+```
+mkdir tic
+cd tic
+git clone https://github.com/nesbox/3rd-party
+git clone https://github.com/nesbox/TIC-80
+```
 
 ## Building TIC-80
 
-- build tools\bin2txt
-- run mingw32-make emscripten
-- run mingw32-make mingw
+The first time you build TIC, you'll need to run these commands:
+```
+cd TIC-80
+cd tools/bin2txt
+mingw32-make
+cd ../..
+mingw32-make emscripten
+mingw32-make mingw
+```
 
-You should now find the `bin\tic.exe` executable.
+You should now be able to run the `bin\tic.exe` executable.
 
+Further TIC builds should be done with
+```
+mingw32-make mingw
+```
+inside the `TIC-80` folder.
+
+### Note
+
+You may have to copy some needed dlls into the `bin` folder. These dlls you can find in the [3rd-party repository](https://github.com/nesbox/3rd-party).
+
+## That's all!
