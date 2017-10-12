@@ -56,6 +56,18 @@ inside the `TIC-80` folder.
 
 ### Note
 
-You may have to copy some needed dlls into the `bin` folder. These dlls you can find in the [3rd-party repository](https://github.com/nesbox/3rd-party).
+If you still get errors from building TIC, try opening the `makefile` in the `TIC-80` folder and change the first line from
+```
+CC=gcc
+```
+to
+```
+CC=mingw32-gcc -m32
+```
+
+
+### Another Note
+
+You may have to copy some needed dlls into the `bin` folder. These dlls you can get by compiling the 3rd party libs you find in the [3rd-party repository](https://github.com/nesbox/3rd-party).
 
 ## That's all!
