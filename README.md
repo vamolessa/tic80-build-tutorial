@@ -68,6 +68,6 @@ CC=mingw32-gcc -m32
 
 ### Another Note
 
-You may have to copy some needed dlls into the `bin` folder. These dlls you can get by compiling the 3rd party libs you find in the [3rd-party repository](https://github.com/nesbox/3rd-party).
+You may have to copy SDL2.dll into the `bin` folder. You can find it by downloading a windows TIC build from its [website](https://nesbox.itch.io/tic).
 
 ## That's all!
