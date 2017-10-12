@@ -65,6 +65,8 @@ to
 CC=mingw32-gcc -m32
 ```
 
+Then proceed to delete all `*.o`, `*.dll` and `*.exe` files inside the `bin` folder 
+
 
 ### Another Note
 
