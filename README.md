@@ -11,12 +11,13 @@ You'll have to have these tools installed:
 #### Installing Mingw32
 
 Download the installer from its [donwload page](https://sourceforge.net/projects/mingw/files/Installer/mingw-get-setup.exe/download).
-Once you have MinGW Installation Manager (search for mingw-get.exe if you don't) running, you'll select
-"All Packages > MinGW > MinGW Base System" on the left column. On the main panel, mark for installation _at least_
-*ming32-base* and *mingw32-gcc*.
+Once you have MinGW Installation Manager running (search for mingw-get.exe if you don't), select "All Packages > MinGW > MinGW Base System" on the left column. On the main panel, mark for installation *ming32-base* and check "Installation > Apply Changes".
 
-After you finished the setup, open a command prompt and type in `gcc --version` and make sure you have both `gcc` and `mingw32-make` on path.
-If you don't, you add their folder manually now.
+After you finished the setup, open a command prompt and type in
+```
+gcc --version
+```
+and make sure you have both `gcc` and `mingw32-make` on path. If you don't, you add them manually. These tools are usually located under `C:/MinGW/bin`.
 
 #### Installing EMScripten Compiler
 
